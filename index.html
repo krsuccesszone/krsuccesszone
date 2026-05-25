@@ -954,15 +954,62 @@ footer {
 
 <!-- AFFILIATE STRIP -->
 <div style="max-width:1200px;margin:0 auto;padding:0 28px 48px">
-  <div class="affiliate-strip">
-    <div>
-      <h3>💡 Start Investing Today — Zero Commission!</h3>
-      <p>Open Demat account with Zerodha, Upstox or Angel One — completely free in 10 minutes</p>
-    </div>
-    <a href="https://upstox.onelink.me/0H1s/F8IF" class="btn-white" target="_blank">
-Open Free Account →
-</a>
+ <div class="broker-box">
+  <h3>💡 Start Investing Today — Zero Commission!</h3>
+  <p>Select your favorite broker and open your free Demat account.</p>
+
+  <div class="broker-buttons">
+
+    <a href="https://upstox.onelink.me/0H1s/F8IF" target="_blank" class="broker-btn">
+      Upstox
+    </a>
+
+    <a href="#" target="_blank" class="broker-btn">
+      Zerodha
+    </a>
+
+    <a href="#" target="_blank" class="broker-btn">
+      Kotak Neo
+    </a>
+
+    <a href="#" target="_blank" class="broker-btn">
+      Angel One
+    </a>
+
   </div>
+</div>
+
+<style>
+.broker-box{
+  background:#0f172a;
+  padding:30px;
+  border-radius:15px;
+  text-align:center;
+  color:white;
+}
+
+.broker-buttons{
+  margin-top:20px;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.broker-btn{
+  background:#00c896;
+  color:white;
+  padding:14px 24px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.broker-btn:hover{
+  background:#00a67d;
+}
+</style>
 </div>
 
 <!-- TAX TOOLS -->
