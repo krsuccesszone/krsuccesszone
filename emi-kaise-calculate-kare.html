@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMI Kaise Calculate Karein | KR Success Zone</title>
+  <meta name="description" content="EMI kaise calculate karein? Formula, real-life examples aur smart tips ke saath poori jaankari. Home loan, car loan EMI calculation Hindi mein." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: #f9f9f7;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e0;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-header .logo {
+      font-family: 'Lora', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+    .site-header .logo span { color: #2e7d32; }
+
+    /* ── Article wrapper ── */
+    .article-wrap {
+      max-width: 760px;
+      margin: 2.5rem auto;
+      padding: 0 1.25rem 4rem;
+    }
+
+    /* ── Tag / Category ── */
+    .tag {
+      display: inline-block;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 1.1rem;
+      text-transform: uppercase;
+    }
+
+    /* ── Title ── */
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #111;
+      line-height: 1.35;
+      margin-bottom: .8rem;
+    }
+
+    /* ── Meta ── */
+    .meta {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1.5px solid #e5e5e0;
+    }
+    .meta span { margin-right: 1.2rem; }
+
+    /* ── Lead / intro ── */
+    .lead {
+      font-family: 'Lora', serif;
+      font-size: 1.07rem;
+      line-height: 1.85;
+      color: #444;
+      margin-bottom: 1.8rem;
+      font-style: italic;
+      border-left: 3px solid #4caf50;
+      padding-left: 1rem;
+    }
+
+    /* ── Body copy ── */
+    p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: #222;
+      margin-bottom: 1.3rem;
+    }
+
+    /* ── Headings ── */
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #111;
+      margin: 2.2rem 0 .65rem;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #111;
+      margin: 1.4rem 0 .4rem;
+    }
+
+    /* ── Formula box ── */
+    .formula-box {
+      background: #f3f4f0;
+      border: 1px solid #ddddd8;
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    .formula {
+      font-family: 'Courier New', monospace;
+      font-size: 1rem;
+      color: #111;
+      font-weight: 700;
+      line-height: 1.9;
+    }
+    .formula-label {
+      font-size: 12px;
+      color: #777;
+      margin-top: .5rem;
+    }
+
+    /* ── Example card ── */
+    .example-card {
+      background: #fff;
+      border: 1px solid #ddddd8;
+      border-radius: 14px;
+      padding: 1.4rem 1.6rem;
+      margin: 1.5rem 0;
+      border-left: 4px solid #4caf50;
+    }
+    .example-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #2e7d32;
+      text-transform: uppercase;
+      letter-spacing: .9px;
+      margin-bottom: .9rem;
+    }
+    .calc-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 7px 0;
+      border-bottom: 1px solid #f0f0ec;
+      font-size: .92rem;
+    }
+    .calc-row:last-child {
+      border-bottom: none;
+      font-weight: 700;
+      font-size: 1rem;
+      padding-top: 10px;
+    }
+    .calc-row .label { color: #666; }
+    .calc-row .value { color: #111; font-weight: 600; }
+    .calc-row.total .value { color: #2e7d32; font-size: 1.1rem; }
+
+    /* ── Stats grid ── */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 1.5rem 0;
+    }
+    .compare-card {
+      background: #f3f4f0;
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      border: 1px solid #ddddd8;
+    }
+    .compare-card .ctitle {
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      color: #888;
+      margin-bottom: .5rem;
+    }
+    .compare-card .cbig {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #111;
+    }
+    .compare-card .csub {
+      font-size: .8rem;
+      color: #777;
+      margin-top: 3px;
+    }
+
+    /* ── Tip box ── */
+    .tip-box {
+      background: #f1f8e9;
+      border-radius: 10px;
+      padding: 1rem 1.3rem;
+      margin: 1.5rem 0;
+      font-size: .92rem;
+      color: #33691e;
+      line-height: 1.75;
+      border: 1px solid #c5e1a5;
+    }
+    .tip-box strong {
+      display: block;
+      margin-bottom: .3rem;
+      font-size: .82rem;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+    }
+
+    /* ── Callout ── */
+    .callout {
+      background: #e3f2fd;
+      border-radius: 10px;
+      padding: 1rem 1.3rem;
+      font-size: .93rem;
+      color: #0d47a1;
+      line-height: 1.75;
+      margin: 1.5rem 0;
+      border: 1px solid #bbdefb;
+    }
+
+    /* ── Divider ── */
+    hr.divider {
+      border: none;
+      border-top: 1px dashed #ccc;
+      margin: 2.2rem 0;
+    }
+
+    /* ── CTA section ── */
+    .cta-section {
+      background: #2e7d32;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+    .cta-section h2 {
+      font-family: 'Lora', serif;
+      color: #fff;
+      margin: 0 0 .5rem;
+      font-size: 1.3rem;
+    }
+    .cta-section p {
+      color: rgba(255,255,255,.85);
+      font-size: .92rem;
+      margin-bottom: 1.2rem;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: #fff;
+      color: #2e7d32;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: .95rem;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform .15s;
+    }
+    .cta-btn:hover { transform: scale(1.03); }
+
+    /* ── Responsive ── */
+    @media (max-width: 520px) {
+      h1 { font-size: 1.55rem; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .formula { font-size: .88rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a class="logo" href="/">KR <span>Success Zone</span></a>
+  </header>
+
+  <!-- Article -->
+  <main class="article-wrap">
+
+    <span class="tag">Personal Finance</span>
+
+    <h1>EMI kaise calculate karein — ek baar mein samajh lo</h1>
+
+    <div class="meta">
+      <span>✍️ KR Success Zone</span>
+      <span>📅 May 2026</span>
+      <span>🕐 5 min read</span>
+    </div>
+
+    <p class="lead">Loan lena ek badi zimmedari hai — aur agar aapko pehle se pata ho ki har mahine kitna dena hoga, toh decision lena bahut aasaan ho jaata hai. Aaj hum EMI ka poora khel samjhenge — formula se lekar real-life examples tak.</p>
+
+    <p>Jab bhi hum koi bada kharcha karte hain — ghar, gaadi, ya phone — bank se loan lete hain. Aur bank kehta hai: "Theek hai, paise de do, par har mahine thoda thoda lauta do." Yahi hoti hai EMI — <strong>Equated Monthly Instalment.</strong></p>
+
+    <p>Lekin aksar log loan le lete hain bina yeh jaane ki asli mein kitna dena padega. Fir ek din statement dekhte hain aur soch mein pad jaate hain — "Itna kaise ho gaya?" Toh aaj hum yeh raaz khol rahe hain.</p>
+
+    <h2>EMI hoti kya hai?</h2>
+    <p>EMI ek fixed monthly payment hai jo aap loan lene ke baad bank ko dete ho — har mahine, ek fixed tarikh par, ek fixed amount. Isme <strong>do cheezein hoti hain:</strong></p>
+    <p>Pehla — <strong>Principal</strong> yaani woh paise jo aapne actually udhare the. Doosra — <strong>Interest</strong> yaani bank ka khaana-paani, matlab unka munafa.</p>
+    <p>Shuruaat mein aapki EMI ka zyada hissa interest mein jaata hai, aur dhire dhire principal ghatta hai. Yahi banking ka "magic" hai — jo actually aapke khilaf kaam karta hai agar aap jaldi repay nahi karte.</p>
+
+    <h2>EMI calculate karne ka formula</h2>
+
+    <div class="formula-box">
+      <div class="formula">EMI = P × r × (1+r)ⁿ ÷ [(1+r)ⁿ − 1]</div>
+      <div class="formula-label">P = Principal &nbsp;|&nbsp; r = Monthly interest rate &nbsp;|&nbsp; n = Number of months</div>
+    </div>
+
+    <p>Dekhne mein daraaona lagta hai, lekin ek baar example se samajh lo — phir aapko koi calculator bhi poochh nahi sakta!</p>
+
+    <h2>Real Example 1 — Home Loan</h2>
+
+    <div class="example-card">
+      <div class="example-title">🏠 Ghar ka sapna — ₹30 Lakh loan</div>
+      <div class="calc-row"><span class="label">Loan Amount (P)</span><span class="value">₹30,00,000</span></div>
+      <div class="calc-row"><span class="label">Annual Interest Rate</span><span class="value">8.5% p.a.</span></div>
+      <div class="calc-row"><span class="label">Monthly Rate (r)</span><span class="value">8.5 ÷ 12 ÷ 100 = 0.00708</span></div>
+      <div class="calc-row"><span class="label">Tenure (n)</span><span class="value">20 years = 240 months</span></div>
+      <div class="calc-row total"><span class="label">Monthly EMI</span><span class="value">≈ ₹26,035</span></div>
+    </div>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="ctitle">Total paid in 20 years</div>
+        <div class="cbig">₹62.5 Lakh</div>
+        <div class="csub">₹30L principal + ₹32.5L interest</div>
+      </div>
+      <div class="compare-card">
+        <div class="ctitle">Interest paid extra</div>
+        <div class="cbig">₹32.5 Lakh</div>
+        <div class="csub">Lagbhag double ho gaya loan!</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <strong>💡 Smart tip</strong>
+      Agar aap 5 saal baad ₹5 Lakh ka prepayment kar do, toh aap lakho rupaye ka interest bacha sakte ho aur loan 3–4 saal pehle khatam ho sakta hai.
+    </div>
+
+    <h2>Real Example 2 — Car Loan</h2>
+
+    <div class="example-card">
+      <div class="example-title">🚗 Nayi gaadi — ₹8 Lakh loan</div>
+      <div class="calc-row"><span class="label">Loan Amount (P)</span><span class="value">₹8,00,000</span></div>
+      <div class="calc-row"><span class="label">Annual Interest Rate</span><span class="value">9% p.a.</span></div>
+      <div class="calc-row"><span class="label">Monthly Rate (r)</span><span class="value">9 ÷ 12 ÷ 100 = 0.0075</span></div>
+      <div class="calc-row"><span class="label">Tenure (n)</span><span class="value">5 years = 60 months</span></div>
+      <div class="calc-row total"><span class="label">Monthly EMI</span><span class="value">≈ ₹16,607</span></div>
+    </div>
+
+    <p>Matlab ek ₹8 Lakh ki gaadi ke liye aap total ₹9.96 Lakh doge — yaani almost ₹2 Lakh extra sirf interest mein. Isliye gaadi kharidne se pehle hamesha EMI calculator chalaana chahiye!</p>
+
+    <hr class="divider" />
+
+    <h2>EMI ko affect karne wale 3 factors</h2>
+
+    <h3>1. Interest Rate kam ho toh?</h3>
+    <p>Wahi ₹30 Lakh home loan agar 7.5% par mile toh EMI ₹24,167 hogi — yani ₹1,868 har mahine ki bachat. 20 saal mein yeh ₹4.4 Lakh ki bachat ban jaati hai!</p>
+
+    <h3>2. Tenure zyada karo toh?</h3>
+    <p>Tenure badhane se EMI toh kam hoti hai, lekin total interest bahut zyada ho jaata hai. 20 saal ka loan 25 saal karo — EMI ₹2,000 kam hogi, par 5 saal zyada interest doge!</p>
+
+    <h3>3. Down payment zyada karo toh?</h3>
+    <p>Loan amount hi kam ho jaye toh EMI apne aap kam ho jaati hai. Agar ₹30 Lakh ki jagah ₹25 Lakh loan lo, toh EMI mein ₹4,300+ ki monthly bachat hogi.</p>
+
+    <div class="callout">
+      Ek zaroori baat — sirf EMI mat dekho. Hamesha <strong>Total Cost of Loan</strong> calculate karo. ₹500 ki EMI ka fark lagta hai chhota, par 20 saal mein woh ₹1.2 Lakh ban jaata hai.
+    </div>
+
+    <h2>Quick calculation shortcut</h2>
+    <p>Agar aapko rough estimate chahiye, toh ek simple thumb rule hai: <strong>har ₹1 Lakh ke loan par 8–9% rate aur 5 saal tenure mein roughly ₹2,000–₹2,100 EMI aati hai.</strong> Toh ₹5 Lakh loan = roughly ₹10,000–10,500 EMI per month.</p>
+    <p>Exact calculation ke liye hamesha EMI calculator use karo — seedha numbers daalo aur result milta hai. Hum apna calculator bhi jaldi launch kar rahe hain!</p>
+
+    <h2>Final baat</h2>
+    <p>EMI ko samajhna koi rocket science nahi hai — bas ek baar formula ki logic pakad lo. Yaad rakho: loan sirf tab lena chahiye jab aap EMI comfortably afford kar sako aur total interest bhi apni financial planning mein fit ho. Ek samajhdaar borrower wahi hota hai jo loan lene se pehle calculator chalata hai, na lene ke baad pachtata hai.</p>
+
+    <div class="tip-box">
+      <strong>📌 Rule of thumb</strong>
+      Apni monthly income ka 40% se zyada kabhi EMI mein mat lagao. Matlab ₹50,000 salary hai toh ₹20,000 se zyada ki total EMI mat lo — sabhi loans milaakar.
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <h2>SIP Calculator Try करें</h2>
+      <p>Apni monthly investment daalein aur future value check karein.</p>
+      <a class="cta-btn" href="https://krsuccesszone.in" target="_blank">Calculator खोलें</a>
+    </div>
+
+  </main>
+
+</body>
+</html>
