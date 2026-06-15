@@ -1,32 +1,463 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIP क्या है? पूरी जानकारी 2026</title>
-<meta name="description" content="SIP क्या है, कैसे काम करती है, फायदे, नुकसान और लंबी अवधि में धन बनाने की पूरी जानकारी।">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIP क्या है? आसान भाषा में पूरी जानकारी | KR Success Zone</title>
+  <meta name="description" content="SIP क्या है, कैसे काम करती है, फायदे, नुकसान और शुरुआत कैसे करें — आसान हिंदी में पूरी जानकारी।">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f6f8;
+      color:#222;
+      line-height:1.8;
+    }
+
+    .topbar{
+      background:#fff;
+      border-bottom:1px solid #e5e5e5;
+      padding:16px 24px;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .logo{
+      text-decoration:none;
+      font-size:24px;
+      font-weight:bold;
+      color:#111;
+    }
+
+    .logo span{
+      color:#159b72;
+    }
+
+    .container{
+      max-width:850px;
+      margin:35px auto;
+      padding:0 15px;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#159b72,#0f7052);
+      color:#fff;
+      border-radius:18px;
+      padding:40px 30px;
+      margin-bottom:28px;
+    }
+
+    .hero-badge{
+      display:inline-block;
+      background:rgba(255,255,255,0.2);
+      padding:6px 15px;
+      border-radius:30px;
+      font-size:12px;
+      margin-bottom:16px;
+    }
+
+    .hero h1{
+      font-size:34px;
+      margin-bottom:12px;
+    }
+
+    .hero p{
+      opacity:0.92;
+      font-size:16px;
+    }
+
+    .article{
+      background:#fff;
+      border-radius:18px;
+      padding:35px 28px;
+      border:1px solid #e9e9e9;
+    }
+
+    .article p{
+      margin-bottom:18px;
+      font-size:16px;
+      color:#444;
+    }
+
+    .highlight{
+      background:#f1fbf7;
+      border-left:4px solid #159b72;
+      padding:16px;
+      border-radius:10px;
+      margin:22px 0;
+      color:#222;
+      font-style:italic;
+    }
+
+    h2{
+      margin-top:35px;
+      margin-bottom:14px;
+      font-size:25px;
+      color:#111;
+      border-left:5px solid #159b72;
+      padding-left:12px;
+    }
+
+    .info-box{
+      background:#f7fffb;
+      border:1px solid #bce8d7;
+      padding:20px;
+      border-radius:14px;
+      margin:20px 0;
+    }
+
+    .info-box ul{
+      padding-left:20px;
+    }
+
+    .info-box li{
+      margin-bottom:10px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:14px;
+      margin:24px 0;
+    }
+
+    .card{
+      background:#e9f8f2;
+      padding:18px;
+      border-radius:14px;
+      text-align:center;
+    }
+
+    .card h3{
+      color:#0f7052;
+      font-size:28px;
+      margin-bottom:5px;
+    }
+
+    .steps{
+      margin-top:20px;
+    }
+
+    .step{
+      display:flex;
+      gap:14px;
+      margin-bottom:18px;
+    }
+
+    .step-number{
+      width:34px;
+      height:34px;
+      border-radius:50%;
+      background:#159b72;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+      flex-shrink:0;
+    }
+
+    .story{
+      background:#fff8e8;
+      border:1px solid #f0d58f;
+      padding:22px;
+      border-radius:14px;
+      margin-top:24px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:18px;
+    }
+
+    table th{
+      background:#f1fbf7;
+      color:#0f7052;
+    }
+
+    table th,
+    table td{
+      border:1px solid #ddd;
+      padding:12px;
+      text-align:left;
+    }
+
+    .benefits{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+      margin-top:22px;
+    }
+
+    .benefit{
+      border:1px solid #e5e5e5;
+      border-radius:14px;
+      padding:18px;
+      background:#fff;
+    }
+
+    .benefit h4{
+      margin:10px 0;
+      font-size:18px;
+    }
+
+    .warning{
+      background:#fff3f0;
+      border:1px solid #f4c2b5;
+      border-radius:14px;
+      padding:22px;
+      margin-top:20px;
+    }
+
+    .faq{
+      margin-top:18px;
+    }
+
+    .faq-item{
+      padding:16px 0;
+      border-bottom:1px solid #ececec;
+    }
+
+    .faq-item h4{
+      margin-bottom:8px;
+      color:#111;
+    }
+
+    .cta{
+      margin-top:35px;
+      background:linear-gradient(135deg,#159b72,#0f7052);
+      color:#fff;
+      text-align:center;
+      border-radius:18px;
+      padding:35px 25px;
+    }
+
+    .cta a{
+      display:inline-block;
+      margin-top:18px;
+      background:#fff;
+      color:#0f7052;
+      text-decoration:none;
+      padding:12px 26px;
+      border-radius:10px;
+      font-weight:bold;
+    }
+
+    @media(max-width:600px){
+      .hero h1{
+        font-size:27px;
+      }
+
+      .article{
+        padding:22px 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>SIP क्या है? पूरी जानकारी</h1>
+<div class="topbar">
+  <a href="#" class="logo">KR <span>Success Zone</span></a>
+</div>
 
-<img src="sip_kya_hai_growth_chart.png"
-     alt="SIP Growth Chart"
-     style="width:100%;max-width:800px;display:block;margin:auto;">
+<div class="container">
 
-<p>
-SIP (Systematic Investment Plan) म्यूचुअल फंड में नियमित निवेश करने का एक आसान तरीका है।
-इसमें आप हर महीने एक निश्चित राशि निवेश करते हैं।
-</p>
+  <div class="hero">
+    <div class="hero-badge">Investment • SIP • Mutual Fund</div>
+    <h1>SIP क्या है? आसान भाषा में समझिए</h1>
+    <p>हर महीने थोड़े पैसे invest करके future में बड़ा fund कैसे बनाया जाता है — यही SIP का गेम है।</p>
+  </div>
 
-<h2>SIP के फायदे</h2>
-<ul>
-<li>कम राशि से शुरुआत</li>
-<li>Rupee Cost Averaging</li>
-<li>Compounding का लाभ</li>
-<li>लंबी अवधि में बेहतर Wealth Creation</li>
-</ul>
+  <div class="article">
+
+    <p>कुछ साल पहले मुझे लगता था कि investment करने के लिए लाखों रुपए चाहिए। लेकिन बाद में पता चला कि लोग ₹500 महीने से भी शुरुआत कर रहे हैं। वहीं से SIP के बारे में जानना शुरू किया।</p>
+
+    <p>अगर आप भी सोचते हैं कि छोटी saving से कुछ बड़ा नहीं बन सकता, तो शायद यह article आपकी सोच बदल दे।</p>
+
+    <div class="highlight">
+      SIP उन लोगों के लिए सबसे ज्यादा useful है जो धीरे‑धीरे पैसा जोड़कर future secure करना चाहते हैं।
+    </div>
+
+    <h2>SIP क्या होता है?</h2>
+
+    <p>SIP का पूरा नाम <strong>Systematic Investment Plan</strong> है। इसमें आप हर महीने एक fix amount Mutual Fund में invest करते हैं।</p>
+
+    <div class="info-box">
+      <ul>
+        <li>हर महीने automatically पैसा invest होता रहता है</li>
+        <li>छोटी amount से भी शुरुआत हो जाती है</li>
+        <li>Long term में अच्छा wealth create हो सकता है</li>
+      </ul>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>₹500</h3>
+        <p>minimum शुरुआत</p>
+      </div>
+
+      <div class="card">
+        <h3>₹1000</h3>
+        <p>popular SIP amount</p>
+      </div>
+
+      <div class="card">
+        <h3>20+ Years</h3>
+        <p>long term growth</p>
+      </div>
+    </div>
+
+    <h2>SIP काम कैसे करती है?</h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div>
+          हर महीने तय तारीख पर पैसा आपके account से कट जाता है।
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div>
+          वह पैसा Mutual Fund में invest हो जाता है।
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div>
+          आपको fund की units मिलती हैं और धीरे‑धीरे investment बढ़ता रहता है।
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div>
+          समय के साथ compounding effect की वजह से पैसा तेजी से grow करता है।
+        </div>
+      </div>
+
+    </div>
+
+    <div class="story">
+      <strong>Real Example:</strong><br><br>
+      अगर कोई व्यक्ति ₹2000 महीने की SIP 10 साल तक करता है और average return 12% मिलता है, तो उसका invested amount लगभग ₹2.4 लाख होगा लेकिन value लगभग ₹4.5 लाख के आसपास पहुँच सकती है।
+    </div>
+
+    <h2>SIP vs FD vs RD</h2>
+
+    <table>
+      <tr>
+        <th>Investment</th>
+        <th>Return</th>
+        <th>Risk</th>
+      </tr>
+
+      <tr>
+        <td>FD</td>
+        <td>6–7%</td>
+        <td>Low</td>
+      </tr>
+
+      <tr>
+        <td>RD</td>
+        <td>6–7%</td>
+        <td>Very Low</td>
+      </tr>
+
+      <tr>
+        <td>SIP</td>
+        <td>10–15%*</td>
+        <td>Market Risk</td>
+      </tr>
+    </table>
+
+    <p style="font-size:13px;color:#777;margin-top:10px;">
+      *Market returns fixed नहीं होते।
+    </p>
+
+    <h2>SIP के फायदे</h2>
+
+    <div class="benefits">
+
+      <div class="benefit">
+        <div>💰</div>
+        <h4>छोटी शुरुआत</h4>
+        <p>₹500 से भी SIP शुरू हो सकती है।</p>
+      </div>
+
+      <div class="benefit">
+        <div>📈</div>
+        <h4>Compounding</h4>
+        <p>लंबे समय में पैसा तेजी से बढ़ सकता है।</p>
+      </div>
+
+      <div class="benefit">
+        <div>🔄</div>
+        <h4>Automatic Investment</h4>
+        <p>हर महीने manually invest करने की जरूरत नहीं।</p>
+      </div>
+
+      <div class="benefit">
+        <div>⚙️</div>
+        <h4>Flexibility</h4>
+        <p>कभी भी pause या stop कर सकते हैं।</p>
+      </div>
+
+    </div>
+
+    <h2>SIP के नुकसान</h2>
+
+    <div class="warning">
+      <p>• SIP में returns guaranteed नहीं होते</p>
+      <p>• Short term में loss भी हो सकता है</p>
+      <p>• गलत fund चुनने पर कम return मिल सकता है</p>
+      <p>• Market गिरने पर investment value नीचे जा सकती है</p>
+    </div>
+
+    <h2>FAQ</h2>
+
+    <div class="faq">
+
+      <div class="faq-item">
+        <h4>SIP कहाँ से शुरू करें?</h4>
+        <p>Groww, Zerodha Coin, Paytm Money या AMC website से।</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>क्या SIP बंद कर सकते हैं?</h4>
+        <p>हाँ, कभी भी pause या stop कर सकते हैं।</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>SIP कितने साल करनी चाहिए?</h4>
+        <p>कम से कम 5 साल और बेहतर result के लिए 10+ साल।</p>
+      </div>
+
+    </div>
+
+    <div class="cta">
+      <h2 style="border:none;padding:0;color:#fff;margin:0 0 10px 0;">SIP Calculator Try करें</h2>
+
+      <p>अपनी monthly investment डालें और future value check करें।</p>
+
+      <a href="https://krsuccesszone.in" target="_blank">Calculator खोलें</a>
+    </div>
+
+  </div>
+
+</div>
 
 </body>
 </html>
